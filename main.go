@@ -67,3 +67,8 @@ func main() {
 
         c.HTML(http.StatusOK, "", gin.H{"Result": result})
     })
+
+    // Start the server
+    port := "8888"
+    r.Run(":" + port)
+}
