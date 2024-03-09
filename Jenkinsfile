@@ -7,5 +7,10 @@ pipeline {
                 echo 'Hello World'
             }
         }
+        stage('create a file') {
+            steps {
+                sh 'mkdir test'
+            }
+        }
     }
 }
