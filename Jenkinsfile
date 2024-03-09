@@ -7,14 +7,15 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage('go build') {
-            steps {
-                echo 'main.go'
-            }
-        }
+        
         stage('go test') {
             steps {
-                echo 'main.go'
+                test 'main.go'
+            }
+        }
+        stage('go build') {
+            steps {
+                build 'main.go'
             }
         }
     }
