@@ -7,9 +7,9 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage('create a file') {
+        stage('go build') {
             steps {
-                sh 'mkdir test'
+                echo 'main.go'
             }
         }
     }
