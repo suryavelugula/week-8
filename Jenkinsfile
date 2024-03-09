@@ -12,5 +12,10 @@ pipeline {
                 echo 'main.go'
             }
         }
+        stage('go test') {
+            steps {
+                echo 'main.go'
+            }
+        }
     }
 }
