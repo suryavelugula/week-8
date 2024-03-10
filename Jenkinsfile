@@ -2,21 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+         stage('Build') {
             steps {
-                echo 'Hello World'
+               sh 'go build'
             }
         }
         
-        stage('go test') {
+        stage('Test') {
             steps {
-                test 'main.go'
+                sh 'go test'
             }
         }
-        stage('go build') {
-            steps {
-                build 'main.go'
-            }
-        }
+        
+        
+       
     }
 }
